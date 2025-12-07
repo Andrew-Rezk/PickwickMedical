@@ -293,10 +293,13 @@ const PickwickMedical = () => {
       <main>
         {/* Hero Section */}
         <section id="home" className="relative pt-12 pb-20 lg:pt-24 lg:pb-32 px-6 overflow-hidden">
+          {/* Background decoration */}
           <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50 -z-10 rounded-bl-[100px]"></div>
           
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            <div className="space-y-8">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Column: Text */}
+            <div className="space-y-8 relative z-10">
               <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold border border-blue-100">
                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                 <span>Accepting New Patients</span>
@@ -340,44 +343,56 @@ const PickwickMedical = () => {
               </div>
             </div>
 
-            <div className="relative lg:block">
-              <div className="absolute -inset-4 bg-blue-500/20 rounded-[2rem] transform rotate-3 blur-md"></div>
-              <div className="relative bg-white p-8 rounded-[2rem] shadow-2xl border border-slate-100">
-                <div className="flex items-start justify-between mb-8">
+            {/* Right Column: Image & Status Card */}
+            <div className="relative lg:h-[600px] flex items-center">
+              {/* Main Image Container */}
+              <div className="relative w-full h-[400px] lg:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform lg:rotate-2 hover:rotate-0 transition-all duration-500">
+                <img 
+                  src="/unnamed.webp" 
+                  alt="Pickwick Medical Clinic Exterior" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Floating Status Card */}
+              <div className="absolute -bottom-6 lg:bottom-12 left-6 right-6 lg:-left-12 lg:right-auto lg:w-80 bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
+                <div className="flex items-start justify-between mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900">Clinic Status</h3>
-                    <p className="text-slate-500">Live Updates</p>
+                    <h3 className="text-xl font-bold text-slate-900">Clinic Status</h3>
+                    <p className="text-slate-500 text-sm">Live Updates</p>
                   </div>
-                  {/* Dynamic Status Badge */}
-                  <div className={`px-4 py-1.5 rounded-full text-sm font-bold flex items-center gap-2 ${clinicStatus.colorClass}`}>
-                    <span className={`w-2 h-2 rounded-full ${clinicStatus.isOpen ? 'bg-green-500' : 'bg-red-500'}`}></span>
+                  <div className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 ${clinicStatus.colorClass}`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${clinicStatus.isOpen ? 'bg-green-500' : 'bg-red-500'}`}></span>
                     {clinicStatus.statusText.toUpperCase()}
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-4">
-                    <div className="bg-white p-3 rounded-lg shadow-sm text-blue-600">
-                      <Clock size={24} />
+                <div className="space-y-3">
+                  <div className="p-3 bg-slate-50 rounded-xl flex items-center gap-3">
+                    <div className="bg-white p-2 rounded-lg shadow-sm text-blue-600">
+                      <Clock size={20} />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-slate-400 uppercase tracking-wider">Today's Hours</p>
-                      <p className="text-lg font-bold text-slate-900">{clinicStatus.hoursText}</p>
+                      <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Today</p>
+                      <p className="text-sm font-bold text-slate-900">{clinicStatus.hoursText}</p>
                     </div>
                   </div>
 
-                  <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-4">
-                    <div className="bg-white p-3 rounded-lg shadow-sm text-blue-600">
-                      <Phone size={24} />
+                  <div className="p-3 bg-slate-50 rounded-xl flex items-center gap-3">
+                    <div className="bg-white p-2 rounded-lg shadow-sm text-blue-600">
+                      <Phone size={20} />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-slate-400 uppercase tracking-wider">Call Us</p>
-                      <a href='tel:9058130477' className="text-lg font-bold text-slate-900 hover:text-blue-600 cursor-pointer transition-colors">(905) 813-0477</a>
+                      <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Call Us</p>
+                      <a href='tel:9058130477' className="text-sm font-bold text-slate-900 hover:text-blue-600 cursor-pointer transition-colors">(905) 813-0477</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </section>
 
