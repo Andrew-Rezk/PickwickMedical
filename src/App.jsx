@@ -306,8 +306,8 @@ const PickwickMedical = () => {
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1]">
-                Your Health, <br/>
-                <span className="text-blue-600">Our Priority.</span>
+               Pickwick Walk-in <br/>
+                <span className="text-blue-600">Medical Clinic</span>
               </h1>
               
               <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
