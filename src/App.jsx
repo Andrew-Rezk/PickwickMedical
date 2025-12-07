@@ -644,7 +644,7 @@ const PickwickMedical = () => {
                       </div>
                       <div className="w-full">
                         <h4 className="text-lg font-bold mb-3">Hours of Operation</h4>
-                        <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
                           <div className="flex justify-between border-b border-slate-800 pb-2">
                             <span className="text-slate-400">Mon - Fri</span>
                             <span className="font-medium">9:00 AM - 6:00 PM</span>
